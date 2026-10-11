@@ -1,0 +1,11 @@
+{
+  "schema": "pmcro.github.local-actions/v1",
+  "route": "@github-agent /github:local-actions",
+  "operations": ["plan", "list", "run"],
+  "defaultOperation": "plan",
+  "applyRequiredForExecution": true,
+  "workspaceConfined": true,
+  "implicitInstall": false,
+  "manualParity": true,
+  "runtimeDependencies": ["act", "container-backend-for-run"]
+}

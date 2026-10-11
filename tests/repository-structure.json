@@ -1,0 +1,27 @@
+{
+  "schema": "pmcro.repository-structure/v1",
+  "project": "github-agent",
+  "mirrors": "dotnet/skills",
+  "canonical": ".pmcro",
+  "requiredDirectories": [
+    ".agents",
+    ".claude-plugin",
+    ".config",
+    ".cursor-plugin",
+    ".github",
+    ".vscode",
+    "agentic-workflows",
+    "docs",
+    "eng",
+    "plugins",
+    "tests"
+  ],
+  "requiredSkillShape": [
+    "SKILL.md",
+    "agents",
+    "scripts",
+    "references",
+    "assets",
+    "tests"
+  ]
+}

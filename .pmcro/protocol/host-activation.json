@@ -1,0 +1,79 @@
+﻿{
+    "apiVersion":  "pmcro.dev/v1",
+    "kind":  "pmcro.host-activation",
+    "id":  "pmcro-host-activation",
+    "canonicalAuthority":  ".pmcro",
+    "baseProjection":  ".agents",
+    "projectionLaw":  "host -\u003e .agents -\u003e .pmcro",
+    "rootSeedPhase":  "ORCHESTRATE",
+    "lifecycle":  [
+                      "ORCHESTRATE",
+                      "PLAN",
+                      "MAKE",
+                      "CHECK",
+                      "REFLECT"
+                  ],
+    "iContextSchema":  "pmcro.i-context/v1",
+    "sourceIntentImmutable":  true,
+    "capabilitySource":  ".pmcro/control/catalog.json",
+    "grantSource":  ".pmcro/control/grants.json",
+    "queueSource":  ".pmcro/control/queue.json",
+    "authorityCeiling":  {
+                             "rule":  "inherit-or-narrow-never-widen",
+                             "hostGrantsAuthority":  false,
+                             "modelGrantsAuthority":  false,
+                             "transportGrantsAuthority":  false
+                         },
+    "trailLaw":  {
+                     "localTrailPerI":  true,
+                     "sharedMutableTrail":  false,
+                     "handoffReferencesParentTrail":  true
+                 },
+    "checker":  {
+                    "independent":  true,
+                    "makerMaySelfApprove":  false,
+                    "modelOutputIsEvidenceUntilChecked":  true
+                },
+    "activation":  {
+                       "hostSpecificBootstrapRequired":  true,
+                       "projectionAloneIsActivation":  false,
+                       "bootstrapMustReadAgentContract":  true,
+                       "bootstrapMustUseProjectedMarketplace":  true,
+                       "bootstrapMustEnterRootSeedAtOrchestrate":  true,
+                       "bootstrapMayNarrowAuthority":  true,
+                       "bootstrapMayWidenAuthority":  false,
+                       "bootstrapMustRunContinuously":  true,
+                       "bootstrapMayRequireHumanPhaseInvocation":  false
+                   },
+    "requiredProjectedHosts":  [
+                                   ".claude",
+                                   ".grok",
+                                   ".cursor",
+                                   ".github"
+                               ],
+    "provingCandidates":  [
+
+                          ],
+    "continuousRun":  {
+                          "enabled":  true,
+                          "automaticPhaseTransitions":  true,
+                          "humanInvocationBetweenPhasesRequired":  false,
+                          "legacyManualPhasePromptsAreAuthoritative":  false,
+                          "runRule":  "while host session is alive, continuously execute admitted work through ORCHESTRATE -\u003e PLAN -\u003e MAKE -\u003e CHECK -\u003e REFLECT and consume earned next seeds in new cycles while bounds remain",
+                          "stopOnlyOn":  [
+                                             "checker-verified-completion",
+                                             "explicit-halt",
+                                             "safety-or-economic-bound",
+                                             "queue-quiescence",
+                                             "host-session-termination"
+                                         ],
+                          "onReconnect":  "resume from durable queue/trail state; do not require the human to restate the seed",
+                          "quiescence":  "no currently admissible queued seed is runnable; quiescence is not completion of future work"
+                      },
+    "executionCadence":  {
+                             "questionGate":  false,
+                             "humanPhaseGate":  false,
+                             "autonomousUntilBoundary":  true,
+                             "reflectedNextSeedAutoAdmit":  true
+                         }
+}

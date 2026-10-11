@@ -11,7 +11,7 @@
   "questionGate": false,
   "repairLimitPerCycle": 1,
   "continueRule": "consume reflected next seed in a new cycle while completionCriteria=false and bounds remain",
-  "completionRule": "checker-verified completion, explicit HALT, or exhausted safety bound",
+  "completionRule": "checker-verified completion, explicit HALT, exhausted safety/economic bound, queue quiescence, or host-session termination",
   "checker": {
     "independent": true,
     "makerMaySelfApprove": false
@@ -19,5 +19,9 @@
   "nextSeed": {
     "recordUnexecuted": true,
     "autonomousRunnerMayConsumeInNewCycle": true
-  }
+  },
+  "automaticPhaseTransitions": true,
+  "humanInvocationBetweenPhasesRequired": false,
+  "legacyManualPhasePromptsAreAuthoritative": false,
+  "onReconnect": "resume from durable queue/trail state without requiring the human to restate an already-recorded seed"
 }

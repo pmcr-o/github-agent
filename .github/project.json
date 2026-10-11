@@ -25,7 +25,11 @@
       "make",
       "check",
       "reflect"
-    ]
+    ],
+    "automaticPhaseTransitions": true,
+    "humanInvocationBetweenPhasesRequired": false,
+    "legacyManualPhasePromptsAreAuthoritative": false,
+    "resumeFromDurableStateOnReconnect": true
   },
   "orchestratorRole": "domain-orchestrator",
   "agentIsOrchestrator": true

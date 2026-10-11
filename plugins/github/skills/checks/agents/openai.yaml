@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Authentication Check"
+  short_description: "Inspect GitHub CLI authentication without changing it"
+  default_prompt: "Use $checks to report GitHub CLI authentication status without changing credentials."

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pmcro.dev/schemas/i-context-v1.json",
+  "title": "PMCR-O recursive I context",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "iRef",
+    "entityRef",
+    "role",
+    "behavior",
+    "intentRef",
+    "lineageRootRef",
+    "parentIRef",
+    "objectIRefs",
+    "addressedIRef",
+    "authorityCeilingRef",
+    "metaDepth",
+    "consciousnessClaim"
+  ],
+  "properties": {
+    "schema": {"const": "pmcro.i-context/v1"},
+    "iRef": {"type": "string", "minLength": 1},
+    "entityRef": {"type": "string", "minLength": 1},
+    "role": {"type": "string", "minLength": 1},
+    "behavior": {"type": "string", "minLength": 1},
+    "intentRef": {"type": "string", "minLength": 1},
+    "lineageRootRef": {"type": "string", "minLength": 1},
+    "parentIRef": {"type": "string"},
+    "objectIRefs": {"type": "array", "items": {"type": "string"}},
+    "addressedIRef": {"type": "string"},
+    "authorityCeilingRef": {"type": "string", "minLength": 1},
+    "metaDepth": {"type": "integer", "minimum": 0},
+    "consciousnessClaim": {"const": false}
+  }
+}
