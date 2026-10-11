@@ -1,0 +1,25 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "agent",
+  "id": "github-agent",
+  "independentSurface": true,
+  "independentChecker": false,
+  "input": [
+    "seed",
+    "plugin",
+    "skill",
+    "grantRefs",
+    "trailRef",
+    "completionCriteria"
+  ],
+  "output": [
+    "artifact",
+    "evidence",
+    "checkerHandoff",
+    "nextSeed"
+  ],
+  "catalog": ".agents/catalog.json",
+  "canonical": ".pmcro",
+  "role": "domain-orchestrator",
+  "agentIsOrchestrator": true
+}

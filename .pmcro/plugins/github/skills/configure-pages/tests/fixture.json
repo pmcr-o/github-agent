@@ -1,0 +1,11 @@
+{
+  "registered": true,
+  "plugin": "github",
+  "skill": "configure-pages",
+  "repository": "pmcr-o/pmcro-agent",
+  "defaultBuildType": "workflow",
+  "defaultSourcePath": "/docs",
+  "dryRunRemoteMutation": false,
+  "applyRequired": true,
+  "sameScriptForManualAndAgent": true
+}

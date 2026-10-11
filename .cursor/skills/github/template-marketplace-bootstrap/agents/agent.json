@@ -1,0 +1,15 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "skill-agent",
+  "id": "github-template-bootstrap-agent",
+  "parentAgent": "github-agent",
+  "plugin": "github",
+  "skill": "template-marketplace-bootstrap",
+  "independentSurface": true,
+  "independentChecker": false,
+  "manualParity": true,
+  "dryRunDefault": true,
+  "remoteMutation": false,
+  "githubAppDispatchOptional": true,
+  "customerOwnsGeneratedRepository": true
+}

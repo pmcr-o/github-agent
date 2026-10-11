@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Workflow Runs"
+  short_description: "Inspect recent GitHub Actions workflow run results"
+  default_prompt: "Use $workflow-runs to list recent workflow runs in the current repository."

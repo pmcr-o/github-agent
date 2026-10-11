@@ -1,0 +1,16 @@
+{
+  "schema": "dotagents.manifest/v1",
+  "name": "github-agent",
+  "owner": "pmcr-o",
+  "description": "GitHub domain agent with bounded read-only repository, issue, pull request, workflow, release, run, and checks operations.",
+  "invocationField": "plugin",
+  "plugins": [
+    {
+      "name": "github",
+      "source": "./.pmcro/plugins/github",
+      "description": "github capabilities owned by github-agent"
+    }
+  ],
+  "canonical": ".pmcro",
+  "projection": ".agents"
+}

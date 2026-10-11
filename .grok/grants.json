@@ -1,0 +1,9 @@
+{
+  "schema": "pmcro.grants/v1",
+  "agent": "github-agent",
+  "default": "least-authority",
+  "credentials": "never-discover",
+  "grantWidening": "deny",
+  "network": "capability-specific",
+  "publication": "separate-explicit-capability"
+}

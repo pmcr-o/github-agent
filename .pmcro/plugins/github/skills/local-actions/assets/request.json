@@ -1,0 +1,7 @@
+{
+  "skill": "local-actions",
+  "registered": false,
+  "agent": "github-local-actions-agent",
+  "description": "Inspect and run GitHub Actions workflows locally through act using the same bounded script for agent and manual terminal execution; actual jobs require explicit apply.",
+  "plugin": "github"
+}

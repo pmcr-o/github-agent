@@ -1,0 +1,23 @@
+{
+  "schema": "pmcro.lifecycle/v1",
+  "phases": [
+    "orchestrate",
+    "plan",
+    "make",
+    "check",
+    "reflect"
+  ],
+  "autonomous": true,
+  "questionGate": false,
+  "repairLimitPerCycle": 1,
+  "continueRule": "consume reflected next seed in a new cycle while completionCriteria=false and bounds remain",
+  "completionRule": "checker-verified completion, explicit HALT, or exhausted safety bound",
+  "checker": {
+    "independent": true,
+    "makerMaySelfApprove": false
+  },
+  "nextSeed": {
+    "recordUnexecuted": true,
+    "autonomousRunnerMayConsumeInNewCycle": true
+  }
+}

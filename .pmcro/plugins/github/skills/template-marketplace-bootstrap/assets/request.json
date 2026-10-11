@@ -1,0 +1,7 @@
+{
+  "registered": true,
+  "agent": "github-template-bootstrap-agent",
+  "plugin": "github",
+  "skill": "template-marketplace-bootstrap",
+  "description": "Generate a customer-owned GitHub template bootstrap workflow and local PMCR-O marketplace provisioning script; dry-run by default, no remote mutation, and compatible with optional GitHub App repository dispatch."
+}

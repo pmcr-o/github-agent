@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Releases"
+  short_description: "List repository releases with bounded read-only commands"
+  default_prompt: "Use $releases to list releases in the current repository."

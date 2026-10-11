@@ -1,0 +1,77 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "agent.index",
+  "agent": "github-agent",
+  "entries": [
+    {
+      "route": "@github-agent /github:checks",
+      "plugin": "github",
+      "skill": "checks",
+      "description": "Show GitHub CLI authentication status without changing credentials. Use when the spoken call is @orchestrator /github:checks. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/checks"
+    },
+    {
+      "route": "@github-agent /github:configure-pages",
+      "plugin": "github",
+      "skill": "configure-pages",
+      "description": "Inspect and configure GitHub Pages for one repository through the GitHub Pages REST API; dry-run by default and remote mutation only with explicit Apply.",
+      "path": ".pmcro/plugins/github/skills/configure-pages"
+    },
+    {
+      "route": "@github-agent /github:issues",
+      "plugin": "github",
+      "skill": "issues",
+      "description": "List issues in the current repository. Use when the spoken call is @orchestrator /github:issues. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/issues"
+    },
+    {
+      "route": "@github-agent /github:local-actions",
+      "plugin": "github",
+      "skill": "local-actions",
+      "description": "Inspect and run GitHub Actions workflows locally through act using the same bounded script for agent and manual terminal execution; actual jobs require explicit apply.",
+      "path": ".pmcro/plugins/github/skills/local-actions"
+    },
+    {
+      "route": "@github-agent /github:pull-requests",
+      "plugin": "github",
+      "skill": "pull-requests",
+      "description": "List pull requests in the current repository. Use when the spoken call is @orchestrator /github:pull-requests. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/pull-requests"
+    },
+    {
+      "route": "@github-agent /github:releases",
+      "plugin": "github",
+      "skill": "releases",
+      "description": "List releases in the current repository. Use when the spoken call is @orchestrator /github:releases. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/releases"
+    },
+    {
+      "route": "@github-agent /github:repositories",
+      "plugin": "github",
+      "skill": "repositories",
+      "description": "List repositories the signed-in account can see. Use when the spoken call is @orchestrator /github:repositories. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/repositories"
+    },
+    {
+      "route": "@github-agent /github:template-marketplace-bootstrap",
+      "plugin": "github",
+      "skill": "template-marketplace-bootstrap",
+      "description": "Generate a customer-owned GitHub template bootstrap workflow and local PMCR-O marketplace provisioning script; dry-run by default, no remote mutation, and compatible with optional GitHub App repository dispatch.",
+      "path": ".pmcro/plugins/github/skills/template-marketplace-bootstrap"
+    },
+    {
+      "route": "@github-agent /github:workflow-runs",
+      "plugin": "github",
+      "skill": "workflow-runs",
+      "description": "List GitHub Actions workflow runs in the current repository. Use when the spoken call is @orchestrator /github:workflow-runs. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/workflow-runs"
+    },
+    {
+      "route": "@github-agent /github:workflows",
+      "plugin": "github",
+      "skill": "workflows",
+      "description": "List GitHub Actions workflows in the current repository. Use when the spoken call is @orchestrator /github:workflows. Do not use to push, merge, or delete.",
+      "path": ".pmcro/plugins/github/skills/workflows"
+    }
+  ]
+}

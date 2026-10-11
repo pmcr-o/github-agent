@@ -1,0 +1,16 @@
+{
+  "name": "github-agent",
+  "owner": {
+    "name": "pmcr-o"
+  },
+  "metadata": {
+    "description": "GitHub domain agent with bounded read-only repository, issue, pull request, workflow, release, run, and checks operations."
+  },
+  "plugins": [
+    {
+      "name": "github",
+      "source": "./.pmcro/plugins/github",
+      "description": "github capabilities owned by github-agent"
+    }
+  ]
+}

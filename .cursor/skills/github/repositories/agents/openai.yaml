@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Repositories"
+  short_description: "List repositories visible to the signed-in account"
+  default_prompt: "Use $repositories to list repositories visible to the current account."

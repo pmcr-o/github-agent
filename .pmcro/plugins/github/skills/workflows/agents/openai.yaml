@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Workflows"
+  short_description: "List GitHub Actions workflows in the current repository"
+  default_prompt: "Use $workflows to list workflows in the current repository."

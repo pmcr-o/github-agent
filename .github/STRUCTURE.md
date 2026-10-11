@@ -1,0 +1,3 @@
+# Structure
+
+`.github -> .agents -> .pmcro`

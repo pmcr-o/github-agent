@@ -1,0 +1,58 @@
+{
+  "apiVersion": "pmcro.dev/v1",
+  "kind": "agent.catalog",
+  "id": "github-agent",
+  "authority": "read-only discovery; execution requires route + grant + runtime",
+  "skills": [
+    {
+      "id": "checks",
+      "plugin": "github",
+      "description": "Show GitHub CLI authentication status without changing credentials. Use when the spoken call is @orchestrator /github:checks. Do not use to push, merge, or delete."
+    },
+    {
+      "id": "configure-pages",
+      "plugin": "github",
+      "description": "Inspect and configure GitHub Pages for one repository through the GitHub Pages REST API; dry-run by default and remote mutation only with explicit Apply."
+    },
+    {
+      "id": "issues",
+      "plugin": "github",
+      "description": "List issues in the current repository. Use when the spoken call is @orchestrator /github:issues. Do not use to push, merge, or delete."
+    },
+    {
+      "id": "local-actions",
+      "plugin": "github",
+      "description": "Inspect and run GitHub Actions workflows locally through act using the same bounded script for agent and manual terminal execution; actual jobs require explicit apply."
+    },
+    {
+      "id": "pull-requests",
+      "plugin": "github",
+      "description": "List pull requests in the current repository. Use when the spoken call is @orchestrator /github:pull-requests. Do not use to push, merge, or delete."
+    },
+    {
+      "id": "releases",
+      "plugin": "github",
+      "description": "List releases in the current repository. Use when the spoken call is @orchestrator /github:releases. Do not use to push, merge, or delete."
+    },
+    {
+      "id": "repositories",
+      "plugin": "github",
+      "description": "List repositories the signed-in account can see. Use when the spoken call is @orchestrator /github:repositories. Do not use to push, merge, or delete."
+    },
+    {
+      "id": "template-marketplace-bootstrap",
+      "plugin": "github",
+      "description": "Generate a customer-owned GitHub template bootstrap workflow and local PMCR-O marketplace provisioning script; dry-run by default, no remote mutation, and compatible with optional GitHub App repository dispatch."
+    },
+    {
+      "id": "workflow-runs",
+      "plugin": "github",
+      "description": "List GitHub Actions workflow runs in the current repository. Use when the spoken call is @orchestrator /github:workflow-runs. Do not use to push, merge, or delete."
+    },
+    {
+      "id": "workflows",
+      "plugin": "github",
+      "description": "List GitHub Actions workflows in the current repository. Use when the spoken call is @orchestrator /github:workflows. Do not use to push, merge, or delete."
+    }
+  ]
+}

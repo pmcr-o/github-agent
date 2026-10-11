@@ -1,0 +1,16 @@
+.pmcro/trails/*
+!.pmcro/trails/README.md
+.pmcro/requests/*
+!.pmcro/requests/README.md
+.pmcro/runtime/*
+!.pmcro/runtime/README.md
+.pmcro/queue/inbox/*.json
+.pmcro/queue/processing/*.json
+.pmcro/queue/delayed/*.json
+.pmcro/queue/completed/*.json
+.pmcro/queue/dead-letter/*.json
+.pmcro/queue/state/*.json
+.pmcro/queue/receipts/*.json
+.pmcro/queue/tmp/*.json
+__pycache__/
+*.pyc

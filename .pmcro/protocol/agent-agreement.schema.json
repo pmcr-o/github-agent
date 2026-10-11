@@ -1,0 +1,21 @@
+{
+  "schema": "pmcro.agent-agreement/v1",
+  "rule": "each agent owns a local trail; cross-agent work exchanges immutable handoff messages and digests, never a shared mutable trail",
+  "required": [
+    "agreementId",
+    "sourceAgent",
+    "sourceTrailRef",
+    "targetAgent",
+    "capability",
+    "evidenceStatus",
+    "handoffDigest"
+  ],
+  "evidenceStatuses": [
+    "CONFIRMED",
+    "NOT-YET-VERIFIED",
+    "NOT-RUN"
+  ],
+  "sharedMutableTrail": false,
+  "receiverCreatesLocalTrail": true,
+  "receiptRule": "target ACK receipt references source message digest and target local trail"
+}

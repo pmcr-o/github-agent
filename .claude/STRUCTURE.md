@@ -1,0 +1,3 @@
+# Structure
+
+`.claude -> .agents -> .pmcro`

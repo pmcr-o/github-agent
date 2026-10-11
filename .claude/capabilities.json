@@ -1,0 +1,61 @@
+{
+  "schema": "pmcro.capabilities/v1",
+  "agent": "github-agent",
+  "executionRule": "registered AND runtime-present AND authorized",
+  "manualParity": {
+    "required": true,
+    "rule": "agent and manual terminal use the same scripts with the same arguments, exit codes, and evidence"
+  },
+  "capabilities": [
+    {
+      "plugin": "github",
+      "skill": "checks",
+      "route": "@github-agent /github:checks"
+    },
+    {
+      "plugin": "github",
+      "skill": "configure-pages",
+      "route": "@github-agent /github:configure-pages"
+    },
+    {
+      "plugin": "github",
+      "skill": "issues",
+      "route": "@github-agent /github:issues"
+    },
+    {
+      "plugin": "github",
+      "skill": "local-actions",
+      "route": "@github-agent /github:local-actions"
+    },
+    {
+      "plugin": "github",
+      "skill": "pull-requests",
+      "route": "@github-agent /github:pull-requests"
+    },
+    {
+      "plugin": "github",
+      "skill": "releases",
+      "route": "@github-agent /github:releases"
+    },
+    {
+      "plugin": "github",
+      "skill": "repositories",
+      "route": "@github-agent /github:repositories"
+    },
+    {
+      "plugin": "github",
+      "skill": "template-marketplace-bootstrap",
+      "route": "@github-agent /github:template-marketplace-bootstrap"
+    },
+    {
+      "plugin": "github",
+      "skill": "workflow-runs",
+      "route": "@github-agent /github:workflow-runs"
+    },
+    {
+      "plugin": "github",
+      "skill": "workflows",
+      "route": "@github-agent /github:workflows"
+    }
+  ]
+}

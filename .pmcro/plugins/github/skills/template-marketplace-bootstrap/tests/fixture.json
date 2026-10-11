@@ -1,0 +1,12 @@
+{
+  "registered": false,
+  "plugin": "github",
+  "skill": "template-marketplace-bootstrap",
+  "workspace": "fixture-template-repository",
+  "templateKind": "maui",
+  "pmcroRepository": "pmcr-o/pmcro-agent",
+  "pmcroRef": "main",
+  "delivery": "pull-request",
+  "dryRunCreatesFiles": false,
+  "expectedManagedFiles": 4
+}

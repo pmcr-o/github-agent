@@ -1,0 +1,32 @@
+{
+  "schema": "pmcro.agent-project/v1",
+  "id": "github-agent",
+  "description": "GitHub domain agent with bounded read-only repository, issue, pull request, workflow, release, run, and checks operations.",
+  "derivedFrom": "A:\\marketplace\\eng\\src\\github",
+  "template": "agent-skills-template",
+  "canonical": ".pmcro",
+  "projection": ".agents",
+  "hostChain": ".claude/.grok/.cursor/.github -> .agents -> .pmcro",
+  "requiredSkillShape": [
+    "SKILL.md",
+    "agents/",
+    "scripts/",
+    "references/",
+    "assets/",
+    "tests/"
+  ],
+  "autonomousLoop": {
+    "enabled": true,
+    "questionGate": false,
+    "onQuestion": "resolve-from-context-or-halt",
+    "phaseOrder": [
+      "orchestrate",
+      "plan",
+      "make",
+      "check",
+      "reflect"
+    ]
+  },
+  "orchestratorRole": "domain-orchestrator",
+  "agentIsOrchestrator": true
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "pmcro.queue-control/v1",
+  "agent": "github-agent",
+  "config": ".pmcro/queue/config.json",
+  "protocol": ".pmcro/protocol/message-kinds.json",
+  "agreement": ".pmcro/protocol/agent-agreement.schema.json",
+  "scripts": ".pmcro/queue/scripts"
+}

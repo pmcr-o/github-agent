@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Issues"
+  short_description: "List repository issues through the read-only tool surface"
+  default_prompt: "Use $issues to list issues in the current repository."

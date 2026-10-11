@@ -1,0 +1,165 @@
+{
+  "schema": "pmcro.message-kinds/v1",
+  "kinds": {
+    "pmcro.seed": {
+      "owner": "orchestrator",
+      "purpose": "start or continue an autonomous cycle"
+    },
+    "orchestrator.route": {
+      "owner": "orchestrator",
+      "purpose": "admit/deny and route"
+    },
+    "planner.plan": {
+      "owner": "planner",
+      "purpose": "bare-minimum validated plan"
+    },
+    "maker.result": {
+      "owner": "maker",
+      "purpose": "execution result; never verdict"
+    },
+    "checker.verdict": {
+      "owner": "checker",
+      "purpose": "PASS/LOOP/HALT only"
+    },
+    "reflector.reflect": {
+      "owner": "reflector",
+      "purpose": "earned constraint and next seed"
+    },
+    "agent.handoff": {
+      "owner": "orchestrator",
+      "purpose": "cross-agent immutable handoff reference"
+    },
+    "capability.invoke": {
+      "owner": "orchestrator",
+      "purpose": "invoke one registered capability"
+    },
+    "capability.result": {
+      "owner": "domain-agent",
+      "purpose": "return capability evidence"
+    },
+    "skill.create.request": {
+      "owner": "skill-creator-agent",
+      "purpose": "request missing capability generation"
+    },
+    "system.halt": {
+      "owner": "orchestrator",
+      "purpose": "terminal bounded halt with evidence"
+    },
+    "governance.audit.reference": {
+      "owner": "governance-agent",
+      "purpose": "reference tamper-evident governance/audit evidence without copying the external audit log"
+    },
+    "outcome.attestation": {
+      "owner": "checker",
+      "purpose": "post-action verification of observed outcome linked to execution and governance evidence"
+    },
+    "model.request": {
+      "owner": "model-gateway-agent",
+      "purpose": "provider-neutral request for external or local inference"
+    },
+    "model.response": {
+      "owner": "model-gateway-agent",
+      "purpose": "normalized captured model response; untrusted until checked"
+    },
+    "procedure.candidate": {
+      "owner": "computer-use-agent",
+      "purpose": "recorded reusable procedure candidate linked to source trails"
+    },
+    "procedure.replay": {
+      "owner": "computer-use-agent",
+      "purpose": "request replay through an explicitly registered computer-use adapter"
+    },
+    "evaluation.score": {
+      "owner": "eval-agent",
+      "purpose": "deterministic score from explicit observed metrics"
+    },
+    "procedure.promotion": {
+      "owner": "eval-agent",
+      "purpose": "checker-backed decision to promote or loop a repeated procedure corpus"
+    },
+    "agent.identity.assertion": {
+      "owner": "any-agent",
+      "purpose": "self-narrated identity statement; carries no authority by itself"
+    },
+    "federation.round": {
+      "owner": "federation-agent",
+      "purpose": "shared seed, bounds, contestants, and budget for one orchestrator competition round"
+    },
+    "federation.submission": {
+      "owner": "federation-agent",
+      "purpose": "validated contestant result/evidence reference under one round"
+    },
+    "federation.referee.verdict": {
+      "owner": "checker",
+      "purpose": "independent settlement evidence; referee must not be a contestant"
+    },
+    "federation.winner.summary": {
+      "owner": "federation-agent",
+      "purpose": "concise evidence-backed winning strategy summary without private internal reasoning"
+    },
+    "confidentiality.classification": {
+      "owner": "confidentiality-agent",
+      "purpose": "declared-label confidentiality classification; no inference of undisclosed sensitive facts"
+    },
+    "confidentiality.disclosure": {
+      "owner": "confidentiality-agent",
+      "purpose": "minimum-necessary disclosure artifact bound to grants and agreement references"
+    },
+    "learning.promotion.request": {
+      "owner": "confidentiality-agent",
+      "purpose": "request to cross operational evidence into a separately governed sanitized learning artifact"
+    },
+    "learning.artifact": {
+      "owner": "confidentiality-agent",
+      "purpose": "sanitized consent/policy-bound reusable learning artifact; raw trail excluded"
+    },
+    "resource.registration": {
+      "owner": "resource-registry-agent",
+      "purpose": "content-addressed validated resource registration backed by independent checker PASS"
+    },
+    "resource.resolution": {
+      "owner": "resource-registry-agent",
+      "purpose": "planner-facing admissibility result from verified registry state"
+    },
+    "resource.revocation": {
+      "owner": "resource-registry-agent",
+      "purpose": "append-only revocation that removes admissibility without deleting provenance"
+    },
+    "registry.verification": {
+      "owner": "resource-registry-agent",
+      "purpose": "hash-chain and evidence-integrity verification result"
+    },
+    "economics.usage": {
+      "owner": "economics-agent",
+      "purpose": "append-only usage/cost/value evidence; not a charge or authority grant"
+    },
+    "economics.heartbeat": {
+      "owner": "economics-agent",
+      "purpose": "WAKE/SLEEP/RECOVER decision for the cheap always-on company control plane"
+    },
+    "economics.entitlement": {
+      "owner": "economics-agent",
+      "purpose": "managed-service quota decision; local/self-hosted execution remains unmetered"
+    },
+    "economics.unit-summary": {
+      "owner": "economics-agent",
+      "purpose": "explicit unit-economics evidence linked to verified outcomes"
+    },
+    "template.bootstrap.request": {
+      "owner": "github-agent",
+      "purpose": "request generation of customer-owned PMCR-O bootstrap surfaces for a repository"
+    },
+    "template.bootstrap.result": {
+      "owner": "github-agent",
+      "purpose": "return bootstrap plan/output evidence; remote mutation remains a separate workflow action"
+    },
+    "dialogue.frame": {
+      "owner": "any-agent",
+      "purpose": "addressable linguistic frame for assert/ask/challenge/propose/respond/summarize/handoff/acknowledge; carries no authority and cannot jump outer phases"
+    },
+    "intent.interpretation": {
+      "owner": "orchestrator",
+      "purpose": "derived interpretation linked to immutable source intent; never replaces the original intent"
+    }
+  }
+}

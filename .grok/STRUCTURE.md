@@ -1,0 +1,3 @@
+# Structure
+
+`.grok -> .agents -> .pmcro`

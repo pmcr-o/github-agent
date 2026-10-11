@@ -1,0 +1,14 @@
+{
+  "registered": true,
+  "agent": "github-pages-agent",
+  "plugin": "github",
+  "skill": "configure-pages",
+  "description": "Configure GitHub Pages through the registered GitHub-domain route; dry-run by default, Apply required for remote mutation.",
+  "example": {
+    "repository": "pmcr-o/pmcro-agent",
+    "buildType": "workflow",
+    "branch": "main",
+    "path": "/docs",
+    "apply": false
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "agent.handoff",
+  "messageId": "fixture-001",
+  "sourceAgent": "pmcro-agent",
+  "targetAgent": "github-agent",
+  "trailId": "trail:fixture",
+  "cycleId": "cycle:fixture",
+  "evidenceStatus": "NOT-RUN"
+}

@@ -1,0 +1,7 @@
+name: local-actions-test
+on: [workflow_dispatch]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo local-actions-test

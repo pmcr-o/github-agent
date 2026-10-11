@@ -1,0 +1,25 @@
+{
+  "schema": "pmcro.routing/v1",
+  "agent": "github-agent",
+  "invocationField": "plugin",
+  "routePattern": "@<agent> /<plugin>:<skill>",
+  "questionGate": false,
+  "clarificationPolicy": "never-block-for-user-question",
+  "resolutionOrder": [
+    "seed",
+    "validated catalog",
+    "grant refs",
+    "prior trail",
+    "checker evidence"
+  ],
+  "missingCapability": {
+    "action": "route-to-skill-creator-agent",
+    "route": "@skill-creator-agent /skill-creator:create-skill",
+    "promotion": "independent-checker-required"
+  },
+  "unresolvedAmbiguity": {
+    "action": "HALT",
+    "askUser": false,
+    "reason": "insufficient validated authority or resources"
+  }
+}

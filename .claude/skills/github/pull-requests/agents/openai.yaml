@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Pull Requests"
+  short_description: "List repository pull requests with read-only commands"
+  default_prompt: "Use $pull-requests to list pull requests in the current repository."

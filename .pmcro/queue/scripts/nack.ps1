@@ -1,0 +1,6 @@
+[CmdletBinding()]
+param([Parameter(Mandatory=$true)][string]$MessageId,[Parameter(Mandatory=$true)][string]$WorkerId,[Parameter(Mandatory=$true)][string]$Reason,[int]$RetryDelaySeconds=-1)
+Import-Module (Join-Path $PSScriptRoot 'queue.psm1') -Force -DisableNameChecking
+Assert-SafeId $MessageId 'MessageId';Assert-SafeId $WorkerId 'WorkerId';$c=Get-QueueConfig;$q=Get-QueueRoot;$src=Join-Path $q "processing/$MessageId.json";if(-not(Test-Path -LiteralPath $src)){throw 'processing message not found'};$s=Read-State $MessageId;if(-not $s -or $s.status -ne 'PROCESSING' -or [string]$s.claimedBy -ne $WorkerId){throw 'worker does not own lease'};$now=UtcNow
+if([int]$s.attempt -ge [int]$c.maxAttempts){$dest=Join-Path $q "dead-letter/$MessageId.json";$s.status='DEAD_LETTER'}else{if($RetryDelaySeconds -lt 0){$RetryDelaySeconds=[int]$c.retryBaseSeconds*[Math]::Pow(2,[Math]::Max(0,[int]$s.attempt-1))};$dest=Join-Path $q "delayed/$MessageId.json";$s.status='DELAYED';$s.availableAt=Iso $now.AddSeconds($RetryDelaySeconds)}
+$s.lastError=$Reason;$s.claimedBy='';$s.leaseUntil='';$s.updatedAt=Iso $now;Move-Item -LiteralPath $src -Destination $dest -ErrorAction Stop;Write-State $MessageId $s;Write-Output "$($s.status) $MessageId"
